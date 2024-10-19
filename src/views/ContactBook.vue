@@ -134,6 +134,6 @@ export default {
 <style scoped>
 .page {
     text-align: left;
-    max-width: 750px;
+    max-width: 1024px;
 }
 </style>

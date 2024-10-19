@@ -7,7 +7,7 @@ export default {
 };
 </script>
 <template>
-    <div id="app">
+    <div>
         <AppHeader />
         <div class="container mt-3">
             <router-view />
@@ -16,7 +16,7 @@ export default {
 </template>
 <style>
 .page {
-    max-width: 400px;
+    max-width: 1024px;
     margin: auto;
 }
 </style>

@@ -16,7 +16,7 @@ export default {
     <ul class="list-group">
         <li class="list-group-item" v-for="(contact, index) in contacts" :key="contact._id"
             :class="{ active: index === activeIndex }" @click="updateActiveIndex(index)">
-            {{ contact.name }}
+            {{ contact.tensach }}
         </li>
     </ul>
 </template>

@@ -1,9 +1,9 @@
 import createApiClient from "./api.service";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api/contacts";
-class ContactService {
-constructor(baseUrl = "/api/contacts") {
+const API_URL = "http://localhost:3000/api/books";
+class BookService {
+constructor(baseUrl = "/api/books") {
 this.api = createApiClient(baseUrl);
 }
 async getAll() {
@@ -34,4 +34,4 @@ async findOne(filter) {
         });
     }
 }
-export default new ContactService();
+export default new BookService();

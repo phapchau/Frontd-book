@@ -9,7 +9,10 @@ export default {
 <template>
     <div>
         <AppHeader />
-        <div class="container mt-3">
+        <div class="component1">
+            <router-view />
+        </div>
+        <div class="container mt-3 pt-3 component2">
             <router-view />
         </div>
     </div>

@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 export default {
     props: {
         contact: { type: Object, 
@@ -31,4 +31,4 @@ export default {
             <i v-else class="fas fa-times"></i>
         </div>
     </div>
-</template>
+</template> -->

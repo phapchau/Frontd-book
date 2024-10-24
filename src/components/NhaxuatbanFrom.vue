@@ -1,19 +1,27 @@
 <template>
     <Form @submit="submitContact" :validation-schema="contactFormSchema">
         <div class="form-group">
-            <label for="username">Username</label>
-            <Field name="username" type="text" class="form-control" v-model="contactLocal.username" />
-            <ErrorMessage name="username" class="error-feedback" />
+            <label for="manv">Mã nhà xuất bản </label>
+            <Field name="manxb" type="text" class="form-control" v-model="contactLocal.manxb" />
+            <ErrorMessage name="manxb" class="error-feedback" />
         </div>
 
         <div class="form-group">
-            <label for="password">Password</label>
-            <Field name="password" type="password" class="form-control" v-model="contactLocal.password" />
-            <ErrorMessage name="password" class="error-feedback" />
+            <label>Họ & tên </label>
+            <Field name="tennxb" type="text" class="form-control" v-model="contactLocal.tennxb" />
+            <ErrorMessage name="tennxb" class="error-feedback" />
         </div>
 
         <div class="form-group">
-            <button class="btn btn-primary">Lưu</button>
+            <label>Địa chỉ </label>
+            <Field name="diachi" type="text" class="form-control" v-model="contactLocal.diachi" />
+            <ErrorMessage name="diachi" class="error-feedback" />
+        </div>
+
+
+
+        <div class="form-group">
+            <button @click.prevent="submitContact" class="btn btn-primary">Lưu</button>
             <button v-if="contactLocal._id" type="button" class="ml-2 btn btn-danger" @click="deleteContact">
                 Xóa
             </button>
@@ -40,16 +48,19 @@ export default {
     },
     data() {
         const contactFormSchema = yup.object().shape({
-            username: yup
+            masach: yup
                 .string()
-                .required("Username phải có giá trị.")
-                .min(2, "Username phải ít nhất 2 ký tự.")
-                .max(50, "Username có nhiều nhất 50 ký tự."),
-            password: yup
+                .required("mã sách là bắt buộc.")
+                .min(2, "mã phải ít nhất 2 ký tự.")
+                .max(50, "mã có nhiều nhất 50 ký tự."),
+            tensach: yup
                 .string()
-                .required("Password phải có giá trị.")
-                .min(6, "Password phải ít nhất 6 ký tự.")
-                .max(50, "Password có nhiều nhất 50 ký tự."),
+                .required(" tên bắt buộc."),
+            // .min(6, "Password phải ít nhất 6 ký tự.")
+            // .max(50, "Password có nhiều nhất 50 ký tự."),
+            diachi: yup
+                .string()
+                .required("dịa chỉ là  bắt buộc.")
         });
 
         return {
@@ -59,6 +70,7 @@ export default {
     },
     methods: {
         submitContact() {
+            console.log("Gọi được")
             this.$emit("submit:contact", this.contactLocal);
         },
         deleteContact() {

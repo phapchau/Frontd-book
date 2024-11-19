@@ -9,7 +9,7 @@
   </div>
 </template>
 <script>
-import ContactForm from "@/components/BookFrom";
+import ContactForm from "../components/BookFrom.vue";
 import BookService from "@/services/books.service";
 
 export default {

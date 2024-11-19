@@ -14,20 +14,21 @@
                 <button class="btn btn-sm btn-primary" @click="refreshList()">
                     <i class="fas fa-redo"></i> Làm mới
                 </button>
-                <button class="btn btn-sm btn-success" @click="goToAddContact">
+                <button class="btn btn-sm btn-danger" @click="removeAllContacts">
+                    <i class="fas fa-trash"></i> Xóa tất cả
+                </button>
+                <!-- <button class="btn btn-sm btn-success" @click="goToAddContact">
                     <i class="fas fa-plus"></i> đăng ký
                 </button>
                 <button class="btn btn-sm btn-success" @click="goToLogIn">
                     <i class="fas fa-plus"></i> đăng nhập
-                </button>
+                </button>-->
 
-                <button class="btn btn-sm btn-success" @click="goToAddNXB">
+                 <button class="btn btn-sm btn-success" @click="goToAddNXB">
                     <i class="fas fa-plus"></i> thêm sách
                 </button>
 
-                <button class="btn btn-sm btn-danger" @click="removeAllContacts">
-                    <i class="fas fa-trash"></i> Xóa tất cả
-                </button>
+                
             </div>
         </div>
         <div class="mt-3 col-md-6">
@@ -71,8 +72,8 @@ export default {
         // Chuyển các đối tượng contact thành chuỗi để tiện cho tìm kiếm.
         contactStrings() {
             return this.contacts.map((contact) => {
-                const { tensach, password } = contact;
-                return [tensachname, password].join("");
+                const { username, password } = contact;
+                return [username, password].join("");
             });
         },
         // Trả về các contact có chứa thông tin cần tìm kiếm.

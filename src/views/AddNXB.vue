@@ -9,7 +9,7 @@
   </div>
 </template>
 <script>
-import NXBForm from "@/components/NhaxuatbanForm.vue";
+import NXBForm from "@/components/NhaxuatbanFrom.vue";
 import NXBService from "@/services/Nhaxuatban.service";
 
 export default {

@@ -74,8 +74,8 @@ export default {
         // Chuyển các đối tượng contact thành chuỗi để tiện cho tìm kiếm.
         contactStrings() {
             return this.contacts.map((contact) => {
-                const { name, email, address, phone } = contact;
-                return [name, email, address, phone].join("");
+                const { username, email, address, phone } = contact;
+                return [username, email, address, phone].join("");
             });
         },
         // Trả về các contact có chứa thông tin cần tìm kiếm.

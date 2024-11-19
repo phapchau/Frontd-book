@@ -1,7 +1,7 @@
 import createApiClient from "./api.service";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api/nhaxuatban";
+const API_URL = "http://localhost:3003/api/nhaxuatban";
 class NhaXuatBanService {
 constructor(baseUrl = "/api/nhaxuatban") {
 this.api = createApiClient(baseUrl);
@@ -24,6 +24,10 @@ return (await this.api.put(`/${id}`, data)).data;
 async delete(id) {
 return (await this.api.delete(`/${id}`)).data;
 }
+
+ async getByManxb(manxb) {
+        return (await this.api.get(`/find/${manxb}`)).data;
+    }
 
 async findOne(filter) {
         return await this.Contact.findOne(filter);

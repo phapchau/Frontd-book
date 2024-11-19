@@ -10,7 +10,7 @@ export default {
     <div>
         <AppHeader />
         <div class="component1">
-            <router-view />
+            <!-- <router-view /> -->
         </div>
         <div class="container mt-3 pt-3 component2">
             <router-view />
@@ -18,8 +18,8 @@ export default {
     </div>
 </template>
 <style>
-.page {
+/* .page {
     max-width: 1024px;
     margin: auto;
-}
+} */
 </style>

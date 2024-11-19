@@ -13,11 +13,13 @@
         </div>
 
         <div class="form-group">
-            <button class="btn btn-primary">Lưu</button>
-            <button v-if="contactLocal._id" type="button" class="ml-2 btn btn-danger" @click="deleteContact">
-                Xóa
+            <button class="btn_login2">
+                Tiếp tục
             </button>
-            <button type="button" class="ml-2 btn btn-danger" @click="Cancel">
+            <!-- <button v-if="contactLocal._id" type="button" class="btn_login2" @click="deleteContact">
+                Xóa
+            </button> -->
+            <button type="button" class="btn_login2" @click="Cancel">
                 Thoát
             </button>
         </div>

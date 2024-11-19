@@ -13,7 +13,7 @@ export default {
     <div>
         <div class="p-1">
             <strong>Tên:</strong>
-            {{ contact.name }}
+            {{ contact.username }}
         </div>
         <div class="p-1">
             <strong>password:</strong>

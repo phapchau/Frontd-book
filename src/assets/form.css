@@ -4,8 +4,8 @@ label {
 }
 
 .card-container.card {
-    max-width: 500px !important;
-    padding: 50px 50px;
+    max-width: 400px !important;
+    padding: 40px 40px;
 }
 
 .card {
@@ -28,9 +28,9 @@ label {
     display: block;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    border-radius: 10%;
+    border-radius: 50%;
 }
 
 .error-feedback {
-    color: rgb(199, 13, 13);
+    color: red;
 }

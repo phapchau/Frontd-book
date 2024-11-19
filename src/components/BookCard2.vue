@@ -6,6 +6,12 @@ export default {
             required: true
         },
     },
+    computed: {
+        //Đảm bảo không cần khai báo lại avataerUrl
+        imageUrl() {
+            return `http://localhost:3003/${this.contact.avatar}`;
+        }
+    }
 };
 </script>
 
@@ -30,6 +36,11 @@ export default {
         <div class="p-1">
             <strong>Năm xuất bản:</strong>
             {{ contact.namxuatban }}
+        </div>
+        <div class="p-1">
+            <strong>Ảnh:</strong>
+            <!-- Sử dụng computed property imageUrl -->
+            <img :src="imageUrl" alt="Book Image">
         </div>
         <!-- <div class="p-1">
             <strong>Số quyển:</strong>

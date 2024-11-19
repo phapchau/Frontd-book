@@ -1,7 +1,7 @@
 import createApiClient from "./api.service";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api/nhanvien";
+const API_URL = "http://localhost:3003/api/nhanvien";
 class NhanVienService {
 constructor(baseUrl = "/api/nhanvien") {
 this.api = createApiClient(baseUrl);

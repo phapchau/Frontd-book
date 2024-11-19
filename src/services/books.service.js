@@ -1,7 +1,7 @@
 import createApiClient from "./api.service";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api/books";
+const API_URL = "http://localhost:3003/api/books";
 class BookService {
 constructor(baseUrl = "/api/books") {
 this.api = createApiClient(baseUrl);
@@ -15,6 +15,9 @@ return (await this.api.post("/", data)).data;
 async deleteAll() {
 return (await this.api.delete("/")).data;
 }
+async getByPublisher(manxb) {
+        return (await this.api.get(`/nxb/${manxb}`)).data;
+    }
 async get(id) {
 return (await this.api.get(`/${id}`)).data;
 }

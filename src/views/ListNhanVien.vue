@@ -15,15 +15,15 @@
                 <button class="btn btn-sm btn-primary" @click="refreshList()">
                     <i class="fas fa-redo"></i> Làm mới
                 </button>
-                <button class="btn btn-sm btn-success" @click="goToAddContact">
+                <!-- <button class="btn btn-sm btn-success" @click="goToAddContact">
                     <i class="fas fa-plus"></i> Đăng ký
                 </button>
                 <button class="btn btn-sm btn-success" @click="goToLogIn">
                     <i class="fas fa-plus"></i> Đăng nhập
-                </button>
+                </button> -->
 
                 <button class="btn btn-sm btn-success" @click="goToAddNXB">
-                    <i class="fas fa-plus"></i> Thêm sách
+                    <i class="fas fa-plus"></i> Thêm nhân viên
                 </button>
 
                 <button class="btn btn-sm btn-danger" @click="removeAllContacts">
@@ -43,9 +43,9 @@
     </div>
 </template>
 <script>
-import NhanVienCard from "@/components/NhanVienCard.vue";
+import NhanVienCard from "@/components/NhanvienCard.vue";
 import InputSearch from "@/components/InputSearch.vue";
-import NhanVienList from "@/components/NhanVienList.vue";
+import NhanVienList from "@/components/NhanvienList.vue";
 import NhanVienService from "@/services/Nhanvien.service";
 export default {
     components: {

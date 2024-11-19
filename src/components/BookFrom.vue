@@ -13,7 +13,7 @@
         </div>
 
         <div class="form-group">
-            <label>Đơn giá</label>
+            <label>Đơn giá (VNG)</label>
             <Field name="dongia" type="number" class="form-control" v-model="contactLocal.dongia" />
             <ErrorMessage name="dongia" class="error-feedback" />
         </div>
@@ -26,14 +26,20 @@
 
         <div class="form-group">
             <label>Năm xuất bản</label>
-            <Field name="namxb" type="number" class="form-control" v-model="contactLocal.namxuatban" />
+            <Field name="namxb" type="year" class="form-control" v-model="contactLocal.namxuatban" />
+            <ErrorMessage name="namxb" class="error-feedback" />
+        </div>
+
+        <div class="form-group">
+            <label>Tác giả</label>
+            <Field name="tacgia" type="tacgia" class="form-control" v-model="contactLocal.tacgia" />
             <ErrorMessage name="namxb" class="error-feedback" />
         </div>
 
         <div class="form-group">
             <button @click.prevent="submitContact" class="btn btn-primary">Lưu</button>
             <button v-if="contactLocal._id" type="button" class="ml-2 btn btn-danger" @click="deleteContact">
-                Xóa
+                Lưu
             </button>
             <button type="button" class="ml-2 btn btn-danger" @click="Cancel">
                 Thoát
